@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-EX — Agensi Transformasi Digital Strategis ⚡</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%233b82f6' d='M176 56V96H336V56c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zM128 96V56c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56V96h80c26.5 0 48 21.5 48 48V408c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48h80z'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <nav class="fixed w-full z-[10001] px-6 md:px-10 py-6 flex justify-between items-center glass-header">
+        <div class="text-xl font-extrabold tracking-tighter uppercase italic">
+            AYDEV<span class="text-blue-600">.</span><span class="opacity-20 text-[10px] ml-1 not-italic">STUDIO</span>
+        </div>
+
+        <div class="hidden md:flex space-x-10 text-[9px] font-black uppercase tracking-[0.4em]">
+            <a href="#about" class="hover:text-blue-500 transition-colors duration-300">Tentang</a>
+            <a href="#services" class="hover:text-blue-500 transition-colors duration-300">Solusi</a>
+            <a href="#process" class="hover:text-blue-500 transition-colors duration-300">Proses</a>
+            <a href="#work" class="hover:text-blue-500 transition-colors duration-300">Karya</a>
+            <a href="#faq" class="hover:text-blue-500 transition-colors duration-300">FAQ</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <button
+                class="btn-luxury hidden md:block px-6 py-2 text-[9px] font-bold uppercase tracking-widest border border-white/10 hover:bg-white hover:text-black transition-all duration-300">
+                Mulai Proyek
+            </button>
+
+            <button class="hamburger md:hidden" id="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 w-full h-screen bg-[#050505] z-[10000] flex flex-col justify-center items-center gap-8 transform -translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]">
+        <a href="#about"
+            class="menu-link text-4xl font-black italic tracking-tighter hover:text-blue-500 transition-colors">TENTANG</a>
+        <a href="#services"
+            class="menu-link text-4xl font-black italic tracking-tighter hover:text-blue-500 transition-colors">SOLUSI</a>
+        <a href="#process"
+            class="menu-link text-4xl font-black italic tracking-tighter hover:text-blue-500 transition-colors">PROSES</a>
+        <a href="#work"
+            class="menu-link text-4xl font-black italic tracking-tighter hover:text-blue-500 transition-colors">KARYA</a>
+        <a href="#faq"
+            class="menu-link text-4xl font-black italic tracking-tighter hover:text-blue-500 transition-colors">FAQ</a>
+        <a href="#contact"
+            class="menu-link text-4xl font-black italic tracking-tighter hover:text-blue-500 transition-colors">KONTAK</a>
+
+        <div class="absolute bottom-10 opacity-20 text-[10px] font-bold tracking-[0.5em]">
+            AYDEV STUDIO © 2025
+        </div>
+    </div>
+    <section class="relative min-h-screen flex items-center px-10 md:px-24">
+        <div class="hero-bg-image"></div>
+        <div class="z-10 max-w-6xl">
+            <div class="flex items-center gap-4 mb-6" data-aos="fade-down">
+                <span class="w-8 h-[1px] bg-white opacity-50"></span>
+                <span class="text-[10px] font-bold tracking-[0.4em] uppercase opacity-60">EST. 2025 DIGITAL
+                    AGENCY</span>
+            </div>
+            <h1 class="text-6xl md:text-[8.5vw] font-extrabold leading-[0.9] tracking-tighter mb-10 text-reveal"
+                data-aos="fade-up">
+                ESTETIKA <br> BERTEMU <br> LOGIKA.
+            </h1>
+            <p class="text-lg md:text-xl opacity-40 max-w-2xl font-light leading-relaxed mb-12" data-aos="fade-up"
+                data-aos-delay="200">
+                Kami adalah studio desain multidisiplin yang berfokus pada kualitas visual premium dan performa sistem
+                yang tak tertandingi.
+            </p>
+            <div class="flex gap-8 items-center" data-aos="fade-up" data-aos-delay="400">
+                <button
+                    class="bg-white text-black px-10 py-4 font-bold text-xs uppercase tracking-widest hover:bg-transparent hover:text-white border border-white transition-all">Lihat
+                    Project</button>
+                <div class="hidden md:block h-[1px] w-24 bg-white opacity-20"></div>
+                <span class="text-[10px] font-bold opacity-30 tracking-widest uppercase italic">Eksklusif &
+                    Terpercaya</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 stat-bg">
+        <div class="max-w-7xl mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-12">
+            <div class="text-center" data-aos="zoom-in">
+                <h3 class="text-5xl font-bold mb-2 tracking-tighter">120+</h3>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 font-bold">Project Selesai</p>
+            </div>
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                <h3 class="text-5xl font-bold mb-2 tracking-tighter">45</h3>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 font-bold">Global Brand</p>
+            </div>
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                <h3 class="text-5xl font-bold mb-2 tracking-tighter">12</h3>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 font-bold">Penghargaan UI</p>
+            </div>
+            <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                <h3 class="text-5xl font-bold mb-2 tracking-tighter">99%</h3>
+                <p class="text-[10px] uppercase tracking-widest opacity-50 font-bold">Kepuasan Klien</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-[#0a0a0a] text-gray-200 selection:bg-blue-600 selection:text-white">
+
+
+        <section id="about" class="py-32 px-6 md:px-10 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start relative overflow-hidden">
+                    <div class="md:col-span-5 block" data-aos="fade-right">
+
+                        <span
+                            class="text-[9px] md:text-[10px] font-bold tracking-[0.35em] md:tracking-[0.5em] text-blue-500 uppercase mb-4 block">
+                            Filosofi Kami
+                        </span>
+
+                        <h2
+                            class="text-3xl md:text-7xl font-extrabold tracking-tight md:tracking-tighter leading-tight md:leading-none italic uppercase text-white break-words">
+                            Mendefinisikan<br>
+                            <span class="text-white/20 hover:text-blue-500 transition-colors duration-500">
+                                Standar Baru
+                            </span><br>
+                            Digital.
+                        </h2>
+                    </div>
+
+                    <div class="md:col-span-6 md:col-start-7 mt-10 md:mt-20" data-aos="fade-up">
+
+                        <p class="text-base md:text-2xl font-light leading-relaxed text-gray-400 mb-10">
+                            D-EX adalah kolektif kreatif yang bergerak di persimpangan antara
+                            <span class="text-white font-semibold">desain radikal</span> dan
+                            <span class="text-white font-semibold">teknologi presisi</span>.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-white/10 pt-10">
+                            <div>
+                                <h4 class="text-xs font-bold tracking-widest uppercase mb-2 text-white">
+                                    Visi Kami
+                                </h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">
+                                    Menjadi katalisator brand lokal di pasar global.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="text-xs font-bold tracking-widest uppercase mb-2 text-white">
+                                    Metode
+                                </h4>
+                                <p class="text-xs text-gray-500 leading-relaxed">
+                                    Desain premium berbasis data & performa.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="mt-32 relative overflow-hidden h-[400px] md:h-[600px] group border border-white/5 flex"
+            data-aos="zoom-out">
+            <div class="w-20 border-r border-white/5 flex items-center justify-center bg-[#080808]">
+                <p
+                    class="rotate-180 text-[10px] font-black tracking-[1em] text-white/20 uppercase [writing-mode:vertical-lr]">
+                    Location / Location / Location
+                </p>
+            </div>
+
+            <div class="relative flex-1 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2000"
+                    class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-[2s] grayscale">
+
+                <div class="absolute inset-0 flex items-center justify-center p-6 text-center">
+                    <div class="max-w-md p-10 bg-black/40 backdrop-blur-md border border-white/5">
+                        <p class="text-blue-500 text-[9px] font-bold tracking-[0.5em] mb-4 uppercase">
+                            Headquarters</p>
+                        <h3 class="text-4xl font-bold italic text-white tracking-tighter uppercase mb-2">Cisarua
+                            Highland</h3>
+                        <p class="text-xs text-gray-400 font-light leading-relaxed">Terletak di ketinggian
+                            Bogor, tempat di mana ide-ide jernih lahir di tengah udara dingin dan ketenangan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="services" class="py-40 px-6 md:px-10 border-y border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 overflow-hidden"
+                    data-aos="fade-up">
+                    <div class="max-w-2xl">
+                        <span
+                            class="text-[9px] md:text-[10px] font-bold tracking-[0.3em] md:tracking-[0.5em] text-blue-500 uppercase mb-4 block">
+                            Keahlian Kami
+                        </span>
+                        <h2
+                            class="text-4xl md:text-6xl font-extrabold tracking-tight md:tracking-tighter leading-tight md:leading-none italic uppercase text-white break-words">
+                            Solusi Tanpa <br> Kompromi.
+                        </h2>
+                    </div>
+                    <p class="text-gray-500 text-sm max-w-xs font-light italic md:text-right">
+                        Mendorong batasan kreativitas untuk menciptakan ekosistem digital yang fungsional.
+                    </p>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-3 gap-4">
+                    <div class="md:col-span-3 md:row-span-2 bg-[#111] p-12 relative group overflow-hidden border border-white/5 flex flex-col justify-between"
+                        data-aos="fade-up">
+                        <div class="relative z-10">
+                            <span class="text-[9px] font-black text-blue-500 uppercase tracking-[0.4em]">01 /
+                                Identity</span>
+                            <h3 class="text-5xl font-bold tracking-tighter mt-4 italic leading-none text-white">
+                                Branding<br>Modern</h3>
+                            <p class="max-w-xs text-gray-500 font-light mt-6 leading-relaxed">Membangun narasi visual
+                                yang kuat agar brand Anda menonjol.</p>
+                        </div>
+                        <a href="#"
+                            class="relative z-10 inline-block text-[10px] font-bold uppercase tracking-[0.3em] border-b border-blue-500 pb-1 w-fit hover:text-blue-400 transition-colors">Lihat
+                            Detail</a>
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000"
+                            class="absolute -right-10 -bottom-10 w-2/3 opacity-20 grayscale group-hover:scale-110 transition-transform duration-[2s]">
+                    </div>
+
+                    <div class="md:col-span-3 bg-white text-black p-10 flex items-center justify-between group overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-1">
+                            <span class="text-[9px] font-black opacity-40 uppercase tracking-[0.4em]">02 /
+                                Experience</span>
+                            <h4 class="text-3xl font-bold tracking-tighter italic uppercase mt-2">UI/UX Crafting</h4>
+                        </div>
+                        <div
+                            class="w-20 h-20 border border-black/10 rounded-full flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-500">
+                            <i class="fa-solid fa-bezier-curve text-2xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 bg-[#151515] p-10 flex flex-col justify-between border border-white/5 group"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-xl font-bold uppercase tracking-tighter italic text-white">Modern Stack</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="text-[8px] border border-white/10 px-2 py-1 font-bold uppercase tracking-widest">Next.js</span>
+                            <span
+                                class="text-[8px] border border-white/10 px-2 py-1 font-bold uppercase tracking-widest text-blue-500">Shopify</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="md:col-span-1 bg-blue-600 text-white p-8 flex flex-col justify-center items-center text-center group">
+                        <i
+                            class="fa-solid fa-microchip text-3xl mb-4 group-hover:rotate-90 transition-transform duration-700"></i>
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.3em]">AI Tech</h4>
+                    </div>
+
+                    <div class="md:col-span-3 bg-[#111] p-10 border border-white/5 flex items-center gap-6"
+                        data-aos="fade-up">
+                        <div>
+                            <span class="text-[9px] font-black text-gray-600 uppercase tracking-[0.4em]">05 /
+                                Strategy</span>
+                            <h4 class="text-xl font-bold italic text-white mt-1 uppercase">Digital Strategy</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-40 px-6 md:px-10 bg-[#0a0a0a] text-white border-b border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-32" data-aos="fade-up">
+                    <span class="text-[10px] font-bold tracking-[0.5em] text-blue-500 uppercase mb-4 block">Alur
+                        Kerja</span>
+                    <h2 class="text-5xl md:text-8xl font-extrabold tracking-tighter italic uppercase leading-none">
+                        Metode <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-white/20 to-transparent">Eksekusi.</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="group p-8 border border-white/5 hover:bg-[#111] transition-all duration-500 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="text-6xl font-black mb-12 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700 italic">
+                            01</div>
+                        <div class="relative z-10">
+                            <h4 class="text-xl font-bold uppercase tracking-tighter mb-4 italic text-white">Discovery
+                            </h4>
+                            <p class="text-xs text-gray-500 font-light leading-relaxed">Tahap krusial memahami visi
+                                bisnis Anda, riset kompetitor, dan menentukan strategi digital yang tajam.</p>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-700">
+                        </div>
+                    </div>
+
+                    <div class="group p-8 border border-white/5 hover:bg-[#111] transition-all duration-500 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="text-6xl font-black mb-12 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700 italic">
+                            02</div>
+                        <div class="relative z-10">
+                            <h4 class="text-xl font-bold uppercase tracking-tighter mb-4 italic text-white">Architecture
+                            </h4>
+                            <p class="text-xs text-gray-500 font-light leading-relaxed">Menyusun blueprint UI/UX yang
+                                intuitif dan memastikan pondasi sistem yang scalable secara teknis.</p>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-700">
+                        </div>
+                    </div>
+
+                    <div class="group p-8 border border-white/5 hover:bg-[#111] transition-all duration-500 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="text-6xl font-black mb-12 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700 italic">
+                            03</div>
+                        <div class="relative z-10">
+                            <h4 class="text-xl font-bold uppercase tracking-tighter mb-4 italic text-white">Crafting
+                            </h4>
+                            <p class="text-xs text-gray-500 font-light leading-relaxed">Proses coding presisi
+                                menggunakan stack modern (Next.js/Cloud) dengan standar keamanan tinggi.</p>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-700">
+                        </div>
+                    </div>
+
+                    <div class="group p-8 border border-white/5 hover:bg-[#111] transition-all duration-500 relative overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div
+                            class="text-6xl font-black mb-12 opacity-5 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700 italic">
+                            04</div>
+                        <div class="relative z-10">
+                            <h4 class="text-xl font-bold uppercase tracking-tighter mb-4 italic text-white">Delivery
+                            </h4>
+                            <p class="text-xs text-gray-500 font-light leading-relaxed">Pengujian ketat sebelum
+                                peluncuran untuk memastikan performa maksimal di semua perangkat.</p>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-[#fcfcfc] overflow-hidden border-y border-gray-100 flex items-center relative w-full">
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#fcfcfc] to-transparent z-10"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#fcfcfc] to-transparent z-10"></div>
+
+            <div class="flex whitespace-nowrap animate-marquee-infinite py-4">
+                <div class="flex items-center gap-16 px-8">
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-microchip text-blue-600 text-2xl opacity-80"></i>
+                        <span class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-black">High
+                            Performance</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-layer-group text-blue-600 text-2xl opacity-80"></i>
+                        <span
+                            class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-gray-300 group-hover:text-black transition-colors duration-500">Scalable
+                            Systems</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-bezier-curve text-blue-600 text-2xl opacity-80"></i>
+                        <span
+                            class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-black">Next-Gen
+                            UX</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-cloud text-blue-600 text-2xl opacity-80"></i>
+                        <span
+                            class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-gray-300 group-hover:text-black transition-colors duration-500">Cloud
+                            Native</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+                </div>
+
+                <div class="flex items-center gap-16 px-8">
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-microchip text-blue-600 text-2xl opacity-80"></i>
+                        <span class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-black">High
+                            Performance</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-layer-group text-blue-600 text-2xl opacity-80"></i>
+                        <span
+                            class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-gray-300 group-hover:text-black transition-colors duration-500">Scalable
+                            Systems</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-bezier-curve text-blue-600 text-2xl opacity-80"></i>
+                        <span
+                            class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-black">Next-Gen
+                            UX</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+
+                    <div class="flex items-center gap-5 group">
+                        <i class="fa-solid fa-cloud text-blue-600 text-2xl opacity-80"></i>
+                        <span
+                            class="text-3xl md:text-5xl font-black italic tracking-tighter uppercase text-gray-300 group-hover:text-black transition-colors duration-500">Cloud
+                            Native</span>
+                    </div>
+                    <span class="text-gray-200 text-4xl font-extralight">/</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="py-40 px-6 md:px-10">
+            <div class="max-w-7xl mx-auto">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-white/10 pb-10 gap-6 overflow-hidden">
+
+                    <div>
+                        <span
+                            class="text-blue-500 font-bold tracking-[0.3em] md:tracking-widest text-[9px] md:text-[10px] uppercase">
+                            Portfolio
+                        </span>
+
+                        <h2
+                            class="text-4xl md:text-7xl font-extrabold tracking-tight md:tracking-tighter leading-tight md:leading-none mt-4 text-white uppercase italic break-words">
+                            Selected Projects
+                        </h2>
+                    </div>
+
+                    <div
+                        class="text-[9px] md:text-[10px] font-medium text-gray-600 uppercase tracking-[0.2em] md:tracking-[0.4em] flex items-center gap-4 md:text-right">
+                        Scroll for more
+                        <span class="w-12 md:w-20 h-[1px] bg-white/10"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-y-32 md:gap-x-10">
+                    <div class="md:col-span-7 group" data-aos="fade-right">
+                        <div class="overflow-hidden mb-8 bg-[#111] border border-white/5">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200"
+                                class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition-transform duration-[2s] opacity-80 group-hover:opacity-100 grayscale group-hover:grayscale-0">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="text-3xl font-bold tracking-tighter italic uppercase text-white">The Noir
+                                    Apartment</h4>
+                                <p class="text-gray-500 text-sm mt-2">Interior Branding & Web Experience</p>
+                            </div>
+                            <span class="text-[10px] text-gray-700 font-bold uppercase tracking-widest">2024</span>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-4 md:col-start-9 md:mt-48 group" data-aos="fade-left">
+                        <div class="overflow-hidden mb-8 bg-[#111] border border-white/5">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200"
+                                class="w-full aspect-[3/4] object-cover group-hover:scale-105 transition-transform duration-[2s] opacity-80 grayscale hover:grayscale-0">
+                        </div>
+                        <h4 class="text-2xl font-bold tracking-tighter italic uppercase text-white">Silicon Hub</h4>
+                        <p class="text-gray-500 text-sm mt-2">System Integration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="py-40 px-6 md:px-10 bg-[#0a0a0a] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative">
+            <div class="absolute inset-y-0 left-0 translate-x-[-30%] ...">“</div>
+        </div>
+
+        <div class="relative z-10" data-aos="fade-up">
+            <h2 class="text-3xl md:text-6xl font-light leading-tight tracking-tighter text-gray-300 italic">
+                "Mereka tidak hanya membangun <span class="text-white font-bold">sistem</span>, mereka membangun
+                <span class="text-white font-bold italic underline decoration-blue-500">masa depan digital</span>
+                kami dengan estetika yang tak tertandingi."
+            </h2>
+
+            <div class="mt-16 flex items-center gap-6">
+                <div class="w-16 h-px bg-blue-600"></div>
+                <div>
+                    <p class="text-white font-bold uppercase tracking-widest text-sm italic">Ayu Sekar Azzkya</p>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-[0.3em] mt-1">CEO, The Noir Group</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-40 px-6 md:px-10 bg-[#0a0a0a] border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-16 md:mb-20 text-center overflow-hidden" data-aos="fade-up">
+
+                <span
+                    class="text-[9px] md:text-[10px] font-bold tracking-[0.25em] md:tracking-[0.5em] text-blue-500 uppercase mb-4 block">
+                    Informasi
+                </span>
+
+                <h2
+                    class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight md:tracking-tighter italic uppercase text-white leading-tight md:leading-none break-words">
+                    Pertanyaan
+                    <span class="block opacity-20 text-white mt-2">Umum.</span>
+                </h2>
+
+            </div>
+
+            <div class="space-y-2">
+                <div class="border-b border-white/10 group" data-aos="fade-up">
+                    <button class="w-full py-10 flex justify-between items-center text-left focus:outline-none">
+                        <span
+                            class="text-lg md:text-xl font-bold uppercase tracking-tighter italic text-white group-hover:text-blue-500 transition-colors duration-500">
+                            Berapa lama proses pengerjaan?
+                        </span>
+                        <div
+                            class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-colors">
+                            <i
+                                class="fa-solid fa-plus text-[10px] text-white opacity-40 group-hover:rotate-45 group-hover:opacity-100 group-hover:text-blue-500 transition-all duration-500"></i>
+                        </div>
+                    </button>
+                    <div class="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-700 ease-in-out">
+                        <p class="pb-10 text-sm md:text-base text-gray-500 font-light leading-relaxed max-w-2xl">
+                            Pengerjaan bervariasi antara <span class="text-white">4 hingga 12 minggu</span>, tergantung
+                            pada kompleksitas fitur dan kedalaman strategi branding yang dibutuhkan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 group" data-aos="fade-up" data-aos-delay="100">
+                    <button class="w-full py-10 flex justify-between items-center text-left focus:outline-none">
+                        <span
+                            class="text-lg md:text-xl font-bold uppercase tracking-tighter italic text-white group-hover:text-blue-500 transition-colors duration-500">
+                            Bagaimana sistem pembayarannya?
+                        </span>
+                        <div
+                            class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-colors">
+                            <i
+                                class="fa-solid fa-plus text-[10px] text-white opacity-40 group-hover:rotate-45 group-hover:opacity-100 group-hover:text-blue-500 transition-all duration-500"></i>
+                        </div>
+                    </button>
+                    <div class="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-700 ease-in-out">
+                        <p class="pb-10 text-sm md:text-base text-gray-500 font-light leading-relaxed max-w-2xl">
+                            Kami menerapkan sistem <span class="text-white">deposit 50%</span> di awal dan pelunasan
+                            setelah proyek selesai atau sesuai dengan milestone yang disepakati.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-b border-white/10 group" data-aos="fade-up" data-aos-delay="200">
+                    <button class="w-full py-10 flex justify-between items-center text-left focus:outline-none">
+                        <span
+                            class="text-lg md:text-xl font-bold uppercase tracking-tighter italic text-white group-hover:text-blue-500 transition-colors duration-500">
+                            Apakah saya mendapatkan source code?
+                        </span>
+                        <div
+                            class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-colors">
+                            <i
+                                class="fa-solid fa-plus text-[10px] text-white opacity-40 group-hover:rotate-45 group-hover:opacity-100 group-hover:text-blue-500 transition-all duration-500"></i>
+                        </div>
+                    </button>
+                    <div class="max-h-0 overflow-hidden group-hover:max-h-40 transition-all duration-700 ease-in-out">
+                        <p class="pb-10 text-sm md:text-base text-gray-500 font-light leading-relaxed max-w-2xl">
+                            Ya, kepemilikan penuh atas <span class="text-white">source code</span> dan aset desain akan
+                            diserahkan sepenuhnya kepada klien setelah pelunasan dilakukan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact"
+        class="relative py-20 md:py-40 px-6 md:px-10 border-t border-white/5 bg-[#030303] text-gray-400 overflow-hidden">
+
+        <div
+            class="absolute -bottom-10 -right-10 md:-bottom-20 md:-right-20 select-none pointer-events-none opacity-[0.02] transform rotate-[-5deg]">
+            <h2 class="text-[120px] md:text-[300px] font-black italic leading-none tracking-tighter text-white">
+                AYDEV
+            </h2>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20">
+
+                <div data-aos="fade-right">
+                    <span
+                        class="text-[10px] font-bold tracking-[0.5em] text-blue-500 uppercase mb-6 block">KOLABORASI</span>
+                    <h2
+                        class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-10 leading-[0.9] text-white italic">
+                        SIAP UNTUK <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/10">BERAKSI?</span>
+                    </h2>
+                    <div class="group inline-block">
+                        <a href="mailto:hello@aydev.studio"
+                            class="text-xl md:text-4xl font-light underline underline-offset-[12px] decoration-1 opacity-60 group-hover:opacity-100 group-hover:text-blue-500 transition-all duration-500 flex items-center gap-4">
+                            hello@aydev.studio
+                            <i
+                                class="fa-solid fa-arrow-up-right text-sm md:text-xl transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-between items-start lg:items-end" data-aos="fade-left">
+                    <div class="hidden lg:block mb-12">
+                        <div
+                            class="w-24 h-24 border border-white/10 flex items-center justify-center rounded-2xl rotate-12 hover:rotate-0 transition-transform duration-700 bg-gradient-to-br from-white/5 to-transparent">
+                            <span class="text-3xl font-black italic text-white">AY.</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="text-[11px] font-medium uppercase tracking-[0.4em] text-white/50 text-left lg:text-right leading-relaxed mb-10 md:mb-0">
+                        <p class="text-blue-500 mb-2">LOKASI KAMI</p>
+                        AYDEV STUDIO INDONESIA<br>
+                        No. 24, Cisarua Center<br>
+                        Cisarua, Bogor
+                    </div>
+
+                    <div
+                        class="flex flex-wrap gap-6 md:gap-10 mt-0 md:mt-12 text-[10px] font-bold uppercase tracking-widest">
+                        <a href="https://www.instagram.com/aydev.s/"
+                            class="text-white hover:text-blue-500 flex items-center gap-2 group transition-all">
+                            <span class="opacity-30 group-hover:opacity-100">IG</span> INSTAGRAM
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayu-sekar-azzkya/"
+                            class="text-white hover:text-blue-500 flex items-center gap-2 group transition-all">
+                            <span class="opacity-30 group-hover:opacity-100">LI</span> LINKEDIN
+                        </a>
+                        <a href="https://github.com/ayusekarazzkya"
+                            class="text-white hover:text-blue-500 flex items-center gap-2 group transition-all">
+                            <span class="opacity-30 group-hover:opacity-100">GH</span> GITHUB
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="order-3 md:order-1 flex flex-col items-center md:items-start gap-2">
+                    <p class="opacity-30 text-[9px] font-black tracking-[0.3em] uppercase">
+                        © 2025 AYDEV DIGITAL STUDIO
+                    </p>
+                    <div class="flex gap-4 opacity-20 text-[8px] font-bold tracking-widest">
+                        <a href="#" class="hover:text-white transition">PRIVACY POLICY</a>
+                        <a href="#" class="hover:text-white transition">TERMS OF SERVICE</a>
+                    </div>
+                </div>
+
+                <div class="order-1 md:order-2 flex flex-col items-center gap-4">
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="h-[1px] w-6 bg-white/10 group-hover:w-10 group-hover:bg-blue-500 transition-all duration-500">
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-mug-hot text-xs text-blue-500 animate-bounce"></i>
+                            <span
+                                class="text-[10px] font-black italic tracking-tighter text-white uppercase bg-white/5 px-3 py-1 rounded">AYDEV</span>
+                        </div>
+                        <div
+                            class="h-[1px] w-6 bg-white/10 group-hover:w-10 group-hover:bg-blue-500 transition-all duration-500">
+                        </div>
+                    </div>
+                    <span class="text-[8px] font-bold tracking-[0.4em] opacity-20 uppercase">Crafting Future
+                        Digital</span>
+                </div>
+
+                <div
+                    class="order-2 md:order-3 opacity-40 text-[9px] font-black tracking-[0.3em] uppercase flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full border border-white/5">
+                    <span class="relative flex h-2 w-2">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    INDONESIA
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap');
+
+:root {
+    --primary: #ffffff;
+    --bg: #000000;
+    --accent: #ffffff;
+    --text-muted: #888888;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    overflow-x: hidden;
+    cursor: none;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+/* --- Custom Cursor --- */
+#cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#cursor-follower {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: transform 0.15s ease-out;
+}
+
+/* --- Hero Image Background --- */
+.hero-bg-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) brightness(30%);
+    z-index: -1;
+    mask-image: linear-gradient(to left, black 60%, transparent 100%);
+}
+
+.glass-header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.bento-card {
+    background: #080808;
+    border: 1px solid #151515;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.bento-card:hover {
+    border-color: #444;
+    background: #0c0c0c;
+    transform: translateY(-5px);
+}
+
+.text-reveal {
+    background: linear-gradient(to bottom, #fff 30%, #555 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.image-hover-zoom {
+    overflow: hidden;
+}
+
+.image-hover-zoom img {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: grayscale(100%);
+}
+
+.image-hover-zoom:hover img {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+.btn-luxury {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-luxury:hover {
+    color: black;
+    background: white;
+}
+
+.stat-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #222;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+@keyframes marquee-flow {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee-infinite {
+    display: flex;
+    width: max-content;
+    animation: marquee-flow 30s linear infinite;
+}
+
+/* Berhenti saat hover agar user bisa baca */
+.animate-marquee-infinite:hover {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .hero-bg-image {
+        width: 100%;
+        /* Gambar hero memenuhi layar di mobile */
+        filter: grayscale(100%) brightness(20%);
+        mask-image: linear-gradient(to top, black 50%, transparent 100%);
+    }
+
+    /* Ukuran font lebih menyesuaikan mobile */
+    .text-7xl {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+
+    .text-8xl {
+        font-size: 4rem;
+        line-height: 1;
+    }
+}
+
+/* Gaya Hamburger Button */
+.hamburger {
+    cursor: pointer;
+    display: none;
+    /* Default sembunyi */
+    flex-direction: column;
+    gap: 6px;
+    z-index: 10001;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Menu Overlay */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu.active {
+    transform: translateY(0);
+}
+
+#mobile-menu a {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+#mobile-menu a:hover {
+    color: #3b82f6;
+    /* Blue-500 */
+}
+
+/* Tampilkan hamburger hanya di layar kecil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    /* Animasi silang saat aktif */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* Mematikan kustom kursor di mobile agar tidak mengganggu touch */
+@media (max-width: 1024px) {
+
+    #cursor,
+    #cursor-follower {
+        display: none;
+    }
+
+    body {
+        cursor: auto;
+    }
+}
